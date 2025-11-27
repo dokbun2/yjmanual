@@ -100,6 +100,9 @@
             YJ평생교육원
         </a>
         <div class="header-title">효진쌤이 드리는 이용매뉴얼</div>
+        <button class="menu-toggle" onclick="toggleMenu()">
+            <i data-lucide="menu"></i>
+        </button>
     </header>
 
     <!-- 레이아웃 -->
@@ -194,6 +197,17 @@
 
     <script>
         lucide.createIcons();
+
+        function toggleMenu() {
+            const sidebar = document.querySelector('.sidebar');
+            sidebar.classList.toggle('open');
+        }
+
+        document.querySelectorAll('.sidebar-menu a').forEach(link => {
+            link.addEventListener('click', () => {
+                document.querySelector('.sidebar').classList.remove('open');
+            });
+        });
     </script>
 </body>
 
