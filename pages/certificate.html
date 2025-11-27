@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>모바일 공동인증서 복사하기 - YJ평생교육원 이용 매뉴얼</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <style>
+        /* 진행 타임라인 */
+        .progress-timeline {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 20px;
+            position: relative;
+            padding: 0 20px;
+        }
+
+        .progress-timeline::before {
+            content: '';
+            position: absolute;
+            top: 20px;
+            left: 60px;
+            right: 60px;
+            height: 3px;
+            background-color: #e5e7eb;
+        }
+
+        .timeline-item {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            position: relative;
+            z-index: 1;
+        }
+
+        .timeline-dot {
+            width: 40px;
+            height: 40px;
+            background-color: #fff;
+            border: 3px solid #e5e7eb;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 8px;
+        }
+
+        .timeline-dot i {
+            width: 20px;
+            height: 20px;
+            color: #9ca3af;
+        }
+
+        .timeline-dot.mobile {
+            border-color: #22c55e;
+            background-color: #dcfce7;
+        }
+
+        .timeline-dot.mobile i {
+            color: #16a34a;
+        }
+
+        .timeline-dot.pc {
+            border-color: #3b82f6;
+            background-color: #dbeafe;
+        }
+
+        .timeline-dot.pc i {
+            color: #2563eb;
+        }
+
+        .timeline-label {
+            font-size: 12px;
+            color: #6b7280;
+            text-align: center;
+        }
+
+        /* 가이드 이미지 */
+        .guide-image-container {
+            margin-top: 32px;
+        }
+
+        .guide-image {
+            width: 100%;
+            max-width: 800px;
+            height: auto;
+            border-radius: 12px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+        }
+    </style>
+</head>
+
+<body>
+    <!-- 헤더 -->
+    <header class="header">
+        <a href="../index.html" class="header-logo">
+            <i data-lucide="graduation-cap"></i>
+            YJ평생교육원
+        </a>
+        <div class="header-title">이용자 매뉴얼</div>
+    </header>
+
+    <!-- 레이아웃 -->
+    <div class="layout">
+        <!-- 사이드바 -->
+        <aside class="sidebar">
+            <div class="sidebar-section">
+                <div class="sidebar-title">
+                    <i data-lucide="clipboard-list"></i>
+                    수강신청 안내
+                </div>
+                <ul class="sidebar-menu">
+                    <li>
+                        <a href="../index.html">
+                            <i data-lucide="file-text"></i>
+                            25. 2학기 사회복지사 자격증
+                        </a>
+                    </li>
+                    <li>
+                        <a href="orientation.html">
+                            <i data-lucide="calendar-check"></i>
+                            개강안내
+                        </a>
+                    </li>
+                    <li>
+                        <a href="certificate.html" class="active">
+                            <i data-lucide="smartphone"></i>
+                            모바일 공동인증서 복사하기
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </aside>
+
+        <!-- 본문 -->
+        <main class="main-content">
+            <div class="page-header">
+                <h1 class="page-title">
+                    <i data-lucide="key-round"></i>
+                    모바일 공동인증서 복사하기 가이드
+                </h1>
+                <p class="page-subtitle">PC에 저장된 공동인증서를 모바일로 복사하여 앱에서 강의를 수강하세요.</p>
+            </div>
+
+            <!-- 진행 흐름 안내 -->
+            <div class="info-card">
+                <div class="info-card-title">
+                    <i data-lucide="git-branch"></i>
+                    진행 흐름 안내
+                </div>
+                <div class="progress-timeline">
+                    <div class="timeline-item">
+                        <div class="timeline-dot mobile">
+                            <i data-lucide="smartphone"></i>
+                        </div>
+                        <span class="timeline-label">모바일 앱<br>로그인</span>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="timeline-dot mobile">
+                            <i data-lucide="key"></i>
+                        </div>
+                        <span class="timeline-label">인증번호<br>확인</span>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="timeline-dot pc">
+                            <i data-lucide="monitor"></i>
+                        </div>
+                        <span class="timeline-label">PC 홈페이지<br>접속</span>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="timeline-dot pc">
+                            <i data-lucide="send"></i>
+                        </div>
+                        <span class="timeline-label">인증서<br>내보내기</span>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="timeline-dot mobile">
+                            <i data-lucide="check-circle"></i>
+                        </div>
+                        <span class="timeline-label">모바일<br>완료</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 가이드 이미지 -->
+            <div class="guide-image-container">
+                <img src="../images/certificate-guide.png" alt="모바일 공동인증서 복사하기 가이드" class="guide-image">
+            </div>
+
+        </main>
+    </div>
+
+    <script>
+        lucide.createIcons();
+    </script>
+</body>
+
+</html>
