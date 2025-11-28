@@ -14,10 +14,7 @@
             <i data-lucide="graduation-cap"></i>
             YJ평생교육원
         </a>
-        <div class="header-title">이용자 매뉴얼</div>
-        <button class="menu-toggle" onclick="toggleMenu()">
-            <i data-lucide="menu"></i>
-        </button>
+        <div class="header-title">효진쌤이 드리는 이용매뉴얼</div>
     </header>
 
     <!-- 레이아웃 -->
@@ -40,12 +37,6 @@
                         <a href="pages/orientation.html">
                             <i data-lucide="calendar-check"></i>
                             개강안내
-                        </a>
-                    </li>
-                    <li>
-                        <a href="pages/certificate.html">
-                            <i data-lucide="smartphone"></i>
-                            모바일 공동인증서 관리
                         </a>
                     </li>
                 </ul>
@@ -147,18 +138,6 @@
 
     <script>
         lucide.createIcons();
-
-        function toggleMenu() {
-            const sidebar = document.querySelector('.sidebar');
-            sidebar.classList.toggle('open');
-        }
-
-        // 메뉴 클릭 시 사이드바 닫기
-        document.querySelectorAll('.sidebar-menu a').forEach(link => {
-            link.addEventListener('click', () => {
-                document.querySelector('.sidebar').classList.remove('open');
-            });
-        });
     </script>
 </body>
 </html>
